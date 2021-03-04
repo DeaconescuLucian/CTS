@@ -1,20 +1,36 @@
 package ro.ase.cts.readers;
 
-public class AplicantReader {
-	public String FileName;
+import java.io.FileNotFoundException;
+import java.util.List;
 
-	public String getFileName() {
-		return FileName;
-	}
-
-	public void setFileName(String fileName) {
-		FileName = fileName;
-	}
-
+import ro.ase.cts.classes.Aplicant;
+public abstract class AplicantReader
+{
+	private String fileName;
+	
+	
 	public AplicantReader(String fileName) {
 		super();
-		FileName = fileName;
+		this.fileName = fileName;
 	}
 	
+	
+
+
+	public String getFileName() {
+		return fileName;
+	}
+
+
+
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
+
+
+
+
+	public abstract List<Aplicant> citesteAplicanti() throws FileNotFoundException, NumberFormatException;
 	
 }
