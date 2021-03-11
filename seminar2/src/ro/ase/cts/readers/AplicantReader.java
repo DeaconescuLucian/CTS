@@ -40,10 +40,14 @@ public abstract class AplicantReader
 		aplicant.setPrenume(input.next());
 		aplicant.setVarsta(input.nextInt());
 		aplicant.setPunctaj(input.nextInt());
+		int nr=input.nextInt();
 		String[] vect = new String[5];
-		for (int i = 0; i < aplicant.getNr_proiecte(); i++)
+		for (int i = 0; i < nr; i++)
+		{
 			vect[i] = input.next();
-		aplicant.setNr_proiecte(input.nextInt(),vect);
+		}
+		aplicant.setNr_proiecte(nr,vect);
+		
 
 	}
 	

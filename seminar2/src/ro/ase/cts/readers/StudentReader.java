@@ -9,7 +9,7 @@ import java.util.Scanner;
 import ro.ase.cts.classes.Aplicant;
 import ro.ase.cts.classes.Student;
 
-public abstract class StudentReader extends AplicantReader {
+public class StudentReader extends AplicantReader {
 	public StudentReader(String fileName) {
 		super(fileName);
 		// TODO Auto-generated constructor stub
