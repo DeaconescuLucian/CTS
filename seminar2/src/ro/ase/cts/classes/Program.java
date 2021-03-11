@@ -15,12 +15,16 @@ public class Program {
 	}
 	
 	public static void main(String[] args) throws FileNotFoundException, NumberFormatException {
+		System.out.println(Student.getSumaFinantata());
+		System.out.println(Angajat.getSumaFinantata());
 		List<Aplicant> listaAplicanti;
 		AplicantReader aplicantReader=new StudentReader("studenti.txt");
 		try {
 			listaAplicanti = citesteAplicanti(aplicantReader);
-			for(Aplicant angajat:listaAplicanti)
+			for(Aplicant angajat:listaAplicanti) {
 				System.out.println(angajat.toString());
+				angajat.afiseazaStatut(new Proiect(80));
+				System.out.println(angajat.getSumaFinantare());}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -25,7 +25,7 @@ public class StudentReader extends AplicantReader {
 			super.citesteAplicant(input, student);
 			int an_studii = input.nextInt();
 			String facultate = (input.next()).toString();
-			Student s = new Student(student.getNume(), student.getPrenume(), student.getVarsta(), student.getPunctaj(), student.getNr_proiecte(), student.getProiecte(), facultate, an_studii);
+			Student s = new Student(student.getNume(), student.getPrenume(), student.getVarsta(), student.getPunctaj(), student.getNrProiecte(), student.getProiecte(), facultate, an_studii);
 			studenti.add(s);
 			//dfdsfdsf
 		}

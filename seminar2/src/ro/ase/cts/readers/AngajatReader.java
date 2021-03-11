@@ -29,7 +29,7 @@ public class AngajatReader extends AplicantReader {
 			super.citesteAplicant(input2, elev);
 			int salariu = input2.nextInt();
 			String ocupatie = input2.next();
-			Angajat a = new Angajat(elev.getNume(), elev.getPrenume(), elev.getVarsta(), elev.getPunctaj(), elev.getNr_proiecte(), elev.getProiecte(), salariu, ocupatie);
+			Angajat a = new Angajat(elev.getNume(), elev.getPrenume(), elev.getVarsta(), elev.getPunctaj(), elev.getNrProiecte(), elev.getProiecte(), salariu, ocupatie);
 			angajati.add(a);
 		}
 		input2.close();

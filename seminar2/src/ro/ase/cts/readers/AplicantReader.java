@@ -46,7 +46,7 @@ public abstract class AplicantReader
 		{
 			vect[i] = input.next();
 		}
-		aplicant.setNr_proiecte(nr,vect);
+		aplicant.setNrProiecte(nr,vect);
 		
 
 	}

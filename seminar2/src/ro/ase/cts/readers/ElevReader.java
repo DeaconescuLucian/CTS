@@ -26,7 +26,7 @@ public class ElevReader extends AplicantReader{
 			super.citesteAplicant(input2, elev);
 			int clasa = input2.nextInt();
 			String tutore = input2.next();
-			Elev e = new Elev(elev.getNume(), elev.getPrenume(), elev.getVarsta(), elev.getPunctaj(), elev.getNr_proiecte(), elev.getProiecte(), clasa, tutore);
+			Elev e = new Elev(elev.getNume(), elev.getPrenume(), elev.getVarsta(), elev.getPunctaj(), elev.getNrProiecte(), elev.getProiecte(), clasa, tutore);
 			elevi.add(e);
 		}
 

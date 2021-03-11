@@ -11,6 +11,10 @@ public class Angajat extends Aplicant{
 	public float getSumaFinantare() {
 		return sumaFinantare;
 	}
+	
+	public static float getSumaFinantata() {
+		return sumaFinantare;
+	}
 	public static void setSumaFinantare(float sumaFinantare) {
 		Angajat.sumaFinantare = sumaFinantare;
 	}
@@ -39,9 +43,7 @@ public class Angajat extends Aplicant{
 	
 	@Override
 	public String toString() {
-		return "Angajat: Nume=" + nume + ", Prenume=" + prenume
-				+ ", Varsta=" + varsta + ", Punctaj=" + punctaj + ", Nr_proiecte=" + nr_proiecte + ", DenumireProiect="
-				+ Arrays.toString(denumireProiect) + "Ocupatie=" + ocupatie + ", salariu=" + salariu;
+		return "Angajat:"+super.toString() + "Ocupatie=" + ocupatie + ", salariu=" + salariu;
 	}
 	
 	
