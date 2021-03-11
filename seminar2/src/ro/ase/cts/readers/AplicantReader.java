@@ -2,6 +2,7 @@ package ro.ase.cts.readers;
 
 import java.io.FileNotFoundException;
 import java.util.List;
+import java.util.Scanner;
 
 import ro.ase.cts.classes.Aplicant;
 public abstract class AplicantReader
@@ -32,5 +33,18 @@ public abstract class AplicantReader
 
 
 	public abstract List<Aplicant> citesteAplicanti() throws FileNotFoundException, NumberFormatException;
+	
+	public void citesteAplicant(Scanner input,Aplicant aplicant)
+	{
+		aplicant.setNume(input.next());
+		aplicant.setPrenume(input.next());
+		aplicant.setVarsta(input.nextInt());
+		aplicant.setPunctaj(input.nextInt());
+		String[] vect = new String[5];
+		for (int i = 0; i < aplicant.getNr_proiecte(); i++)
+			vect[i] = input.next();
+		aplicant.setNr_proiecte(input.nextInt(),vect);
+
+	}
 	
 }
