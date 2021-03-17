@@ -7,17 +7,6 @@ public class Angajat extends Aplicant{
 	private int salariu;
 	private static float sumaFinantare=10;
 	
-	@Override
-	public float getSumaFinantare() {
-		return sumaFinantare;
-	}
-	
-	public static float getSumaFinantata() {
-		return sumaFinantare;
-	}
-	public static void setSumaFinantare(float sumaFinantare) {
-		Angajat.sumaFinantare = sumaFinantare;
-	}
 	public String getOcupatie() {
 		return ocupatie;
 	}
@@ -30,20 +19,20 @@ public class Angajat extends Aplicant{
 	public void setSalariu(int salariu) {
 		this.salariu = salariu;
 	}
-	public Angajat(String nume, String prenume, int varsta, int punctaj, int nr_proiecte, String[] denumire_Proiecte,int salariu,String ocupatie) {
-		super(nume,prenume,varsta,punctaj,nr_proiecte,denumire_Proiecte);
+	public Angajat(String nume, String prenume, int varsta, int punctaj, int nrProiecte, String[] denumiriProiecte,int salariu,String ocupatie) {
+		super(nume,prenume,varsta,punctaj,nrProiecte,denumiriProiecte);
 		this.salariu = salariu;
 		this.ocupatie = ocupatie;
 	}
 	public Angajat() {
 		super();
-		
+		   
 	}
 	
 	
 	@Override
 	public String toString() {
-		return "Angajat:"+super.toString() + "Ocupatie=" + ocupatie + ", salariu=" + salariu;
+		return "Angajat: "  +super.toString()+ "Ocupatie=" + ocupatie + ", salariu=" + salariu;
 	}
 	
 	
@@ -53,5 +42,18 @@ public class Angajat extends Aplicant{
 		System.out.println("Angajatul "+getNume()+" "+getPrenume()+" primeste"+s+" Euro/zi in proiect.");
 		return s;
 	}
+	@Override
+	public float getSumaFinantare() {
+		// TODO Auto-generated method stub
+		return sumaFinantare ;
+	}
+	public static void setSumaFinantare(float sumaFinantare) {
+		Angajat.sumaFinantare = sumaFinantare;
+	}
+public static float getSmaFinantare() {
+		
+		return sumaFinantare ;
+	}
+	
 	
 }

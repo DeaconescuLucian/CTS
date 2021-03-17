@@ -1,23 +1,23 @@
 package ro.ase.cts.classes;
 
 public class Proiect {
-	
-	private float pragAdmitere;
 
-	public Proiect(float pragAdmitere) {
+	
+	private  int prag;
+	
+	public Proiect(int p) {
 		super();
-		this.pragAdmitere = pragAdmitere;
+		this.prag=p;
+		
 	}
 
-	public float getPragAdmitere() {
-		return pragAdmitere;
+	public int getPrag() {
+		return prag;
 	}
 
-	public void setPragAdmitere(float pragAdmitere) {
-		this.pragAdmitere = pragAdmitere;
+	public void setPrag(int prag) {
+		this.prag = prag;
 	}
-	
-	
 	
 	
 }
