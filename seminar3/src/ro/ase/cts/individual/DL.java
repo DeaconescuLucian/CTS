@@ -7,7 +7,7 @@ public class DL {
 	private int bileteCastigatoare;
 	private String pacaneauaPreferata;
 	private float celMaiMareMultiplicator;
-	public static DL instance=null;
+	private static DL instance=null;
 	
 	
 	
