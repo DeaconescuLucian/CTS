@@ -20,7 +20,7 @@ public class program1 {
 		bilet2.setCod(3);
 		
 		System.out.println(bilet1.toString());
-		System.out.println(bilet2.toString());
+		System.out.println(client2.toString());
 		
 	}
 
