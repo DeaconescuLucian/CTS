@@ -4,39 +4,47 @@ import static org.junit.Assert.*;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 public class GrupaTest {
 
+	
 	@Test
+	@Category(UrgentTests.class)
 	public void constructorTest() {
 		Grupa grupa=new Grupa(1055);
 		Assert.assertEquals(1055,grupa.getNrGrupa());
 	}
 	
 	@Test
+	@Category(UrgentTests.class)
 	public void limitaInfTest() {
 		Grupa grupa=new Grupa(1000);
 		Assert.assertEquals(1000,grupa.getNrGrupa());
 	}
 	
 	@Test
+	@Category(UrgentTests.class)
 	public void limitaSupTest() {
 		Grupa grupa=new Grupa(1100);
 		Assert.assertEquals(1100,grupa.getNrGrupa());
 	}
 	
 	@Test(expected=IndexOutOfBoundsException.class)
+	@Category(UrgentTests.class)
 	public void inAfaraLimitelorTest()
 	{
 		Grupa grupa=new Grupa(1300);
 	}
 	
-	@Test(timeout=1000) public void prefromantaTest()
+	@Test(timeout=1000)
+	@Category(NormalTests.class)public void prefromantaTest()
 	{
 		Grupa grupa=new Grupa(1100);
 	}
 	
-	@Test public void promovabilitateTest()
+	@Test
+	@Category(NormalTests.class)public void promovabilitateTest()
 	{
 		Grupa grupa=new Grupa(1079);
 		for(int i=1;i<11;i++)
@@ -49,6 +57,7 @@ public class GrupaTest {
 	}
 	
 	@Test
+	@Category(NormalTests.class)
 	public void testListaLimInf() {
 		Grupa g=new Grupa(1004);
 		for(int i=0;i<10;i++) {
@@ -61,6 +70,7 @@ public class GrupaTest {
 		
 	}
 	@Test
+	@Category(NormalTests.class)
 	public void testListaLimSup() {
 		Grupa g=new Grupa(1004);
 		for(int i=0;i<10;i++) {
@@ -74,6 +84,7 @@ public class GrupaTest {
 	}
 	
 	@Test
+	@Category(NormalTests.class)
 	public void CardinalitiPromovabilitateTest() {
 		Grupa g=new Grupa(1004);
 		Student stud=new Student();

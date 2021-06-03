@@ -24,6 +24,11 @@ public class Grupa {
     public int getNrGrupa() {
 		return nrGrupa;
 	}
+    
+    public List<IStudent> getStudenti()
+    {
+    	return this.studenti;
+    }
 
 	public void importaStudenti(List<IStudent> studenti){
         this.studenti.addAll(studenti);
